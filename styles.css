@@ -1,0 +1,175 @@
+:root {
+  --navy: #071238;
+  --panel: #101b3e;
+  --panel-border: #25345e;
+  --gold: #ffda32;
+  --gold-deep: #ffb900;
+  --text: #f7f7fb;
+  --muted: #d6dced;
+}
+
+* { box-sizing: border-box; }
+html { min-height: 100%; background: #03091c; }
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  background: #03091c;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.page-shell {
+  width: min(100%, 430px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 20px 12px 10px;
+  overflow: hidden;
+  background: var(--navy);
+  border-left: 1px solid #1b274b;
+  border-right: 1px solid #1b274b;
+}
+.topline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 11px;
+  color: #ffe66a;
+  font-size: 7px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+.connection { text-align: center; }
+.connection b { color: #fff2a2; }
+.brand { text-align: center; padding-top: 22px; }
+.logo {
+  width: 87px;
+  height: 69px;
+  margin: 0 auto 10px;
+  display: grid;
+  place-items: center;
+  color: #ffe336;
+  font-size: 14px;
+  font-weight: 900;
+  border: 1px solid #8d4a00;
+  border-radius: 16px;
+  background: linear-gradient(155deg, #7b1019 0%, #40151e 62%, #29141e 100%);
+  box-shadow: 0 0 12px #d786171a, inset 0 0 10px #ffb00012;
+}
+h1 {
+  margin: 0;
+  color: #ffda39;
+  font-size: clamp(21px, 6vw, 28px);
+  line-height: 1.2;
+  font-weight: 900;
+  letter-spacing: .2px;
+}
+.eyebrow {
+  margin: 5px 0 0;
+  color: #ffdf40;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .8px;
+}
+.eyebrow span { padding: 0 2px; }
+.intro {
+  max-width: 310px;
+  margin: 13px auto 17px;
+  color: #f0f2fa;
+  font-size: 8.5px;
+  line-height: 1.5;
+}
+.download {
+  display: flex;
+  min-height: 37px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 22px;
+  color: #070b18;
+  background: linear-gradient(180deg, #ffe65a 0%, #ffd12d 53%, #ffb800 100%);
+  box-shadow: 0 5px 12px #ffbf0029;
+  text-decoration: none;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+.download:hover { filter: brightness(1.06); }
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+  margin: 13px 0 11px;
+}
+.stat {
+  min-height: 47px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: 1px solid var(--panel-border);
+  border-radius: 11px;
+  background: #0d1738;
+}
+.stat small { color: #c9c9ff; font-size: 7.5px; }
+.stat strong { color: #ffdc37; font-size: 11px; }
+.features { display: grid; gap: 8px; }
+.feature {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 9px;
+  border: 1px solid #17264e;
+  border-radius: 11px;
+  background: linear-gradient(105deg, #111d41, #0d1735);
+}
+.feature-icon {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 900;
+  background: #273253;
+}
+.flame { color: #ffb52c; background: #482c20; }
+.crown { color: #ffd85b; background: #44351d; }
+.shield { color: #7ec7ff; background: #153c60; }
+.chat { color: #f2e8d4; background: #37354b; font-size: 8px; }
+.feature h2 { margin: 0 0 3px; font-size: 9px; line-height: 1.2; font-weight: 800; }
+.feature p { margin: 0; color: var(--muted); font-size: 7.2px; line-height: 1.45; }
+.safety {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin: 18px 0 27px;
+  color: #ffeb32;
+  text-align: center;
+  font-size: 7px;
+  line-height: 1.25;
+  font-weight: 900;
+}
+.safety i { color: #e8e9f1; font-style: normal; }
+.mobile-break { display: none; }
+.lower-download { margin-bottom: 24px; }
+footer { text-align: center; }
+footer a {
+  display: block;
+  padding: 4px 3px;
+  border-radius: 9px;
+  color: #121a2b;
+  background: #f1f0e9;
+  font-size: 6.7px;
+  font-weight: 900;
+  line-height: 1.35;
+  text-decoration: underline;
+}
+@media (min-width: 500px) {
+  body { padding: 20px 0; }
+  .page-shell { border-radius: 18px; box-shadow: 0 12px 45px #0008; }
+}
